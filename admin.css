@@ -1,0 +1,139 @@
+/* Admin Panel Styles */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+}
+
+.admin-logo {
+  padding: 0 20px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-logo img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.admin-sidebar h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.admin-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.admin-sidebar nav li {
+  margin-bottom: 5px;
+}
+
+.admin-sidebar nav a {
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.admin-sidebar nav a:hover,
+.admin-sidebar nav li.active a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-content {
+  flex: 1;
+  background-color: #f5f7fa;
+}
+
+.admin-header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.admin-section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.activity-log {
+  margin-top: 15px;
+}
+
+.activity-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+  }
+
+  .stats-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
